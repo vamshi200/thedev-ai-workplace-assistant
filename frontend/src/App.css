@@ -1,3 +1,52 @@
+.app-shell {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  background: #0f172a;
+  padding: 30px 22px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  z-index: 9999;
+}
+
+.sidebar-logo {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.sidebar-logo span {
+  color: #a855f7;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.sidebar a:hover {
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+}
+
+.main-content {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +70,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 55px 40px 35px;
+  padding: 45px 24px 35px;
   height: 100vh;
 }
 
@@ -59,7 +108,7 @@ body {
 }
 
 .chat-container {
-  width: 900px;
+  width: min(900px, calc(100vw - 320px));
   height: 690px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -218,4 +267,17 @@ button:hover {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+.page {
+  padding: 60px;
+}
+
+.page h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.page p {
+  color: #94a3b8;
+  font-size: 18px;
 }
